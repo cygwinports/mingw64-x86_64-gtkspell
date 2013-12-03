@@ -1,0 +1,10 @@
+--- origsrc/gtkspell-2.0.13/gtkspell/Makefile.am	2004-06-09 22:41:57.000000000 -0500
++++ src/gtkspell-2.0.13/gtkspell/Makefile.am	2008-06-01 20:23:53.406250000 -0500
+@@ -1,6 +1,7 @@
+ lib_LTLIBRARIES=libgtkspell.la
+ AM_CFLAGS=@GTKSPELL_CFLAGS@ -DG_LOG_DOMAIN=\"gtkspell\" -DLOCALEDIR=\""$(datadir)/locale"\"
+ libgtkspell_la_LIBADD=@GTKSPELL_LIBS@ @SPELLER_LIB@
++libgtkspell_la_LDFLAGS=-no-undefined
+ libgtkspell_la_includedir=$(includedir)/gtkspell-2.0/gtkspell
+ libgtkspell_la_include_HEADERS=gtkspell.h
+ libgtkspell_la_SOURCES=gtkspell.c deprecated.c gtkspell.h
